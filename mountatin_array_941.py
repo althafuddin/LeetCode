@@ -1,12 +1,12 @@
 class Solution:
-    def validMountainArray(self, arr):
-        if len(arr) >= 3:
-            x = 1
-            counter=self.validateGrowth(arr, x)
-            return (self.validateDepth(arr,counter))
+    # def validMountainArray(self, arr):
+    #     if len(arr) >= 3:
+    #         x = 1
+    #         counter=self.validateGrowth(arr, x)
+    #         return (self.validateDepth(arr,counter))
             
-        else:
-            return False
+    #     else:
+    #         return False
 
     def validateGrowth(self, arr, x):
         for i in arr:
@@ -26,3 +26,7 @@ class Solution:
                     else:
                         return False
                 return True
+
+nums_list = [4,3,2,1,1,2,3,1]
+class_instance = Solution()
+class_instance.validateGrowth(nums_list, 0)
