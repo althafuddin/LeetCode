@@ -59,7 +59,7 @@ class LinkedList:
         found = False
 
         while current and not found:
-            if current.data == key and current is self.head
+            if current.data == key and current is self.head:
                 found = True
                 self.head = current.next_node
             elif current.data == key:
@@ -115,7 +115,18 @@ class LinkedList:
 
         prev_node.next_node = new
         new.next_node = next_node
+    
+    def node_at_index(self, index):
+        if index == 0:
+            return self.head
+        else:
+            current = self.head
+            position = 0 
 
+            while position < index:
+                current = current.next_node
+                position+=1
+            return current
     
     def __repr__(self):
         """
